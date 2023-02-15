@@ -9,13 +9,19 @@ const db = require('./config/connection');
 const app = express();
 const PORT = process.env.PORT || 3003;
 
-const server = new ApolloServer({
-  typeDefs,
-  resolvers,
-  context: authMiddleware
-})
+var server;
 
-server.applyMiddleware({ app });
+async function startServer() {
+    server = new ApolloServer({
+        typeDefs,
+        resolvers,
+        context: authMiddleware
+    })
+    await server.start();
+    server.applyMiddleware({ app });
+}
+
+startServer();
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
@@ -26,7 +32,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 app.get ('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../client/build/index.html'));
+  res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 
 db.once('open', () => {
