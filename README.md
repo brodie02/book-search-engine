@@ -16,8 +16,6 @@ This week's challenge focused on replacing the RESTFUL API with GraphQL API in a
 
 To access the website, click the link below.
 
-https://brodie02.github.io/react-portfolio-good/
-
 ![homepage](./client/public/webpage.png)
 
 ## Credits
