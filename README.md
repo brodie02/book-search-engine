@@ -16,6 +16,8 @@ This week's challenge focused on replacing the RESTFUL API with GraphQL API in a
 
 To access the website, click the link below.
 
+https://enigmatic-basin-54671.herokuapp.com/
+
 ![homepage](./client/public/webpage.png)
 
 ## Credits
