@@ -2,8 +2,8 @@
   "name": "googlebooks-app",
   "version": "1.0.0",
   "description": "",
-  "engine": {
-    "node": "16.x"
+  "engines": {
+    "npm": "7.x"
   },
   "main": "server/server.js",
   "scripts": {
